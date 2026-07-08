@@ -2,8 +2,13 @@
 
 Custom application templates for [CubeCoders AMP](https://cubecoders.com/AMP), following the format of the official [CubeCoders/AMPTemplates](https://github.com/CubeCoders/AMPTemplates) repository.
 
-## Farming Simulator 25
+## CoD4X Tempalte
 
+
+##
+
+## Farming Simulator 25
+https://github.com/blacky201/AMPTemplates/tree/claude/zen-planck-vp2nlm
 Generic module template for the Farming Simulator 25 Dedicated Server.
 
 ### Important notes
