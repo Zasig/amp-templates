@@ -1,1 +1,1 @@
-# cod4x-amp-template
+# amp-templates
