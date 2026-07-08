@@ -1,0 +1,23 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": 10823,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Port for game traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 8080,
+        "Ref": "WebPort",
+        "Name": "Web Interface Port",
+        "Description": "Port for the dedicated server web interface (HTTP)"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 8443,
+        "Ref": "TLSPort",
+        "Name": "Web Interface TLS Port",
+        "Description": "Port for the dedicated server web interface (HTTPS), if TLS is enabled"
+    }
+]

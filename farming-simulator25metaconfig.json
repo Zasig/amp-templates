@@ -1,0 +1,12 @@
+[
+    {
+        "ConfigFile": "dedicatedServer.xml",
+        "AutoMap": true,
+        "ConfigType": "xml"
+    },
+    {
+        "ConfigFile": "profile/dedicated_server/dedicatedServerConfig.xml",
+        "AutoMap": true,
+        "ConfigType": "xml"
+    }
+]

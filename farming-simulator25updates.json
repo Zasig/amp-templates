@@ -1,0 +1,53 @@
+[
+    {
+        "UpdateStageName": "Game Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Initialise Wine",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"[[ -d \\\"{{$FullRootDir}}.wine\\\" ]] && exit 0; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Profile Directory Creation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p \\\"{{$FullRootDir}}.wine/drive_c/users/$(whoami)/Documents/My Games/FarmingSimulator2025/dedicated_server\\\" && ln -sfn \\\"{{$FullRootDir}}.wine/drive_c/users/$(whoami)/Documents/My Games/FarmingSimulator2025\\\" \\\"{{$FullBaseDir}}profile\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Profile Directory Creation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProfileDir = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'My Games\\FarmingSimulator2025'; New-Item -ItemType Directory -Force -Path (Join-Path $ProfileDir 'dedicated_server') | Out-Null; if (-not (Test-Path 'farming-simulator25\\game\\profile')) { New-Item -ItemType Junction -Path 'farming-simulator25\\game\\profile' -Value $ProfileDir | Out-Null }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Web Interface Config Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/blacky201/AMPTemplates/main/farming-simulator25dedicatedserver.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UpdateSourceArgs": "dedicatedServer.xml",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Config Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/blacky201/AMPTemplates/main/farming-simulator25dedicatedserverconfig.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}profile/dedicated_server/",
+        "UpdateSourceArgs": "dedicatedServerConfig.xml",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    }
+]
