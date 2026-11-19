@@ -380,7 +380,7 @@
         "MinValue": "0",
         "MaxValue": "64",
         "ParamFieldName": "net_maxfilesize",
-        "DefaultValue": "16",
+        "DefaultValue": "64",
         "Placeholder": "16",
         "Suffix": "MB",
         "EnumValues": {}
