@@ -212,7 +212,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c 'set -eu; cd \"{{$FullBaseDir}}cstrike/addons/sourcemod/plugins\"; for p in mapchooser nominations rockthevote; do cp \"disabled/$p.smx\" \"$p.smx\"; done'",
+        "UpdateSourceArgs": "-c 'set -eu\ncd \"{{$FullBaseDir}}cstrike/addons/sourcemod/plugins\"\nfor plugin in mapchooser nominations rockthevote; do\n    if [ -f \"disabled/$plugin.smx\" ]; then\n        cp \"disabled/$plugin.smx\" \"$plugin.smx\"\n    else\n        test -f \"$plugin.smx\"\n    fi\ndone\nif [ -f randomcycle.smx ]; then\n    mv --backup=numbered randomcycle.smx randomcycle.smx.lan-off\nfi'",
         "UpdateSourceConditionSetting": "InstallMod",
         "UpdateSourceConditionValue": "true"
     },
@@ -221,7 +221,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -LiteralPath '{{$FullBaseDir}}cstrike/addons/sourcemod/plugins'; foreach ($p in @('mapchooser.smx','nominations.smx','rockthevote.smx')) { Copy-Item -LiteralPath (Join-Path 'disabled' $p) -Destination $p -Force -ErrorAction Stop }\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -LiteralPath '{{$FullBaseDir}}cstrike/addons/sourcemod/plugins' -ErrorAction Stop; foreach ($p in @('mapchooser.smx','nominations.smx','rockthevote.smx')) { $source = Join-Path 'disabled' $p; if (Test-Path -LiteralPath $source) { Copy-Item -LiteralPath $source -Destination $p -Force -ErrorAction Stop } elseif (!(Test-Path -LiteralPath $p)) { throw ('Missing plugin: '+$p) } }; if (Test-Path -LiteralPath 'randomcycle.smx') { $name='randomcycle.smx.lan-off'; if (Test-Path -LiteralPath $name) { $name+='.'+[Guid]::NewGuid().ToString('N') }; Rename-Item -LiteralPath 'randomcycle.smx' -NewName $name -ErrorAction Stop }\"",
         "UpdateSourceConditionSetting": "InstallMod",
         "UpdateSourceConditionValue": "true"
     }
