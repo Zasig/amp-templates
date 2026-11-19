@@ -211,7 +211,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c 'set -eu\nstage=\"{{$FullRootDir}}.lan-gungame-source/sourcemod-plugin-gungame-f631f436037b3cb1d85af684441dfc66c4614a82\"\ntarget=\"{{$FullBaseDir}}cstrike\"\nmkdir -p \"$target/addons/sourcemod/plugins\" \"$target/addons/sourcemod/translations\" \"$target/cfg/gungame\" \"$target/sound/gungame\"\ncp -R \"$stage/addons/sourcemod/translations/.\" \"$target/addons/sourcemod/translations/\"\ncp -R \"$stage/cfg/gungame/css\" \"$target/cfg/gungame/\"\ncp -R \"$stage/sound/gungame/.\" \"$target/sound/gungame/\"\nfor plugin in gungame gungame_config gungame_bot gungame_mapvoting gungame_display_winner gungame_warmup_configs gungame_tk gungame_stats; do\ncp \"$stage/addons/sourcemod/plugins/$plugin.smx\" \"$target/addons/sourcemod/plugins/$plugin.smx\"\ndone'"
+        "UpdateSourceArgs": "-c \"set -eu; stage=css/.lan-gungame-source/sourcemod-plugin-gungame-f631f436037b3cb1d85af684441dfc66c4614a82; target=css/232330/cstrike; mkdir -p $target/addons/sourcemod/plugins $target/addons/sourcemod/translations $target/cfg/gungame $target/sound/gungame; cp -R $stage/addons/sourcemod/translations/. $target/addons/sourcemod/translations/; cp -R $stage/cfg/gungame/css $target/cfg/gungame/; cp -R $stage/sound/gungame/. $target/sound/gungame/; for p in gungame gungame_config gungame_bot gungame_mapvoting gungame_display_winner gungame_warmup_configs gungame_tk gungame_stats; do cp $stage/addons/sourcemod/plugins/$p.smx $target/addons/sourcemod/plugins/$p.smx; done\""
     },
     {
         "UpdateStageName": "GunGame LAN asset: lan-gungame.template.cfg",
@@ -272,7 +272,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c 'set -eu\ncd \"{{$FullBaseDir}}cstrike/addons/sourcemod/plugins\"\nfor plugin in mapchooser nominations rockthevote; do\n    if [ -f \"disabled/$plugin.smx\" ]; then\n        cp \"disabled/$plugin.smx\" \"$plugin.smx\"\n    else\n        test -f \"$plugin.smx\"\n    fi\ndone\nif [ -f randomcycle.smx ]; then\n    mv --backup=numbered randomcycle.smx randomcycle.smx.lan-off\nfi'",
+        "UpdateSourceArgs": "-c \"set -eu; cd css/232330/cstrike/addons/sourcemod/plugins; for p in mapchooser nominations rockthevote; do if test -f disabled/$p.smx; then cp disabled/$p.smx $p.smx; else test -f $p.smx; fi; done; if test -f randomcycle.smx; then mv --backup=numbered randomcycle.smx randomcycle.smx.lan-off; fi\"",
         "UpdateSourceConditionSetting": "InstallMod",
         "UpdateSourceConditionValue": "true"
     },

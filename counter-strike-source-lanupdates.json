@@ -212,7 +212,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c 'set -eu\ncd \"{{$FullBaseDir}}cstrike/addons/sourcemod/plugins\"\nfor plugin in mapchooser nominations rockthevote; do\n    if [ -f \"disabled/$plugin.smx\" ]; then\n        cp \"disabled/$plugin.smx\" \"$plugin.smx\"\n    else\n        test -f \"$plugin.smx\"\n    fi\ndone\nif [ -f randomcycle.smx ]; then\n    mv --backup=numbered randomcycle.smx randomcycle.smx.lan-off\nfi'",
+        "UpdateSourceArgs": "-c \"set -eu; cd css/232330/cstrike/addons/sourcemod/plugins; for p in mapchooser nominations rockthevote; do if test -f disabled/$p.smx; then cp disabled/$p.smx $p.smx; else test -f $p.smx; fi; done; if test -f randomcycle.smx; then mv --backup=numbered randomcycle.smx randomcycle.smx.lan-off; fi\"",
         "UpdateSourceConditionSetting": "InstallMod",
         "UpdateSourceConditionValue": "true"
     },
