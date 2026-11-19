@@ -188,5 +188,41 @@
         "UpdateSourceArgs": "lan-bots.template.cfg",
         "UpdateSourceTarget": "{{$FullRootDir}}",
         "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "LAN map voting mapchooser",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Zasig/amp-templates/main/counter-strike-source-lan-mapchooser.template.cfg",
+        "UpdateSourceArgs": "lan-mapchooser.template.cfg",
+        "UpdateSourceTarget": "{{$FullRootDir}}",
+        "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "LAN map voting rockthevote",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Zasig/amp-templates/main/counter-strike-source-lan-rockthevote.template.cfg",
+        "UpdateSourceArgs": "lan-rockthevote.template.cfg",
+        "UpdateSourceTarget": "{{$FullRootDir}}",
+        "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "Enable SourceMod map voting",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c 'set -eu; cd \"{{$FullBaseDir}}cstrike/addons/sourcemod/plugins\"; for p in mapchooser nominations rockthevote; do cp \"disabled/$p.smx\" \"$p.smx\"; done'",
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
+    },
+    {
+        "UpdateStageName": "Enable SourceMod map voting",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -LiteralPath '{{$FullBaseDir}}cstrike/addons/sourcemod/plugins'; foreach ($p in @('mapchooser.smx','nominations.smx','rockthevote.smx')) { Copy-Item -LiteralPath (Join-Path 'disabled' $p) -Destination $p -Force -ErrorAction Stop }\"",
+        "UpdateSourceConditionSetting": "InstallMod",
+        "UpdateSourceConditionValue": "true"
     }
 ]

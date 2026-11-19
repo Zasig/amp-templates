@@ -1725,5 +1725,194 @@
         "EnumValues": {},
         "MinValue": "1",
         "MaxValue": "30"
+    },
+    {
+        "DisplayName": "fy_chancellery",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenrotation:map:1",
+        "Description": "In Rotation aufnehmen; mindestens eine auf diesem Server installierte Karte auswählen. Nach Änderung den Spielserver neu starten.",
+        "Keywords": "lan_css_fy_chancellery",
+        "FieldName": "lan_css_fy_chancellery",
+        "InputType": "checkbox",
+        "ParamFieldName": "lan_css_fy_chancellery",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "fy_chancellery"
+        }
+    },
+    {
+        "DisplayName": "fy_chateau",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenrotation:map:1",
+        "Description": "In Rotation aufnehmen; mindestens eine auf diesem Server installierte Karte auswählen. Nach Änderung den Spielserver neu starten.",
+        "Keywords": "lan_css_fy_chateau",
+        "FieldName": "lan_css_fy_chateau",
+        "InputType": "checkbox",
+        "ParamFieldName": "lan_css_fy_chateau",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "fy_chateau"
+        }
+    },
+    {
+        "DisplayName": "gg_mystic_garden",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenrotation:map:1",
+        "Description": "In Rotation aufnehmen; mindestens eine auf diesem Server installierte Karte auswählen. Nach Änderung den Spielserver neu starten.",
+        "Keywords": "lan_css_gg_mystic_garden",
+        "FieldName": "lan_css_gg_mystic_garden",
+        "InputType": "checkbox",
+        "ParamFieldName": "lan_css_gg_mystic_garden",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "gg_mystic_garden"
+        }
+    },
+    {
+        "DisplayName": "gg_no90_remix",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenrotation:map:1",
+        "Description": "In Rotation aufnehmen; mindestens eine auf diesem Server installierte Karte auswählen. Nach Änderung den Spielserver neu starten.",
+        "Keywords": "lan_css_gg_no90_remix",
+        "FieldName": "lan_css_gg_no90_remix",
+        "InputType": "checkbox",
+        "ParamFieldName": "lan_css_gg_no90_remix",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "gg_no90_remix"
+        }
+    },
+    {
+        "DisplayName": "gg_tnb_aztec",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenrotation:map:1",
+        "Description": "In Rotation aufnehmen; mindestens eine auf diesem Server installierte Karte auswählen. Nach Änderung den Spielserver neu starten.",
+        "Keywords": "lan_css_gg_tnb_aztec",
+        "FieldName": "lan_css_gg_tnb_aztec",
+        "InputType": "checkbox",
+        "ParamFieldName": "lan_css_gg_tnb_aztec",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "gg_tnb_aztec"
+        }
+    },
+    {
+        "DisplayName": "gg_xlighty",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenrotation:map:1",
+        "Description": "In Rotation aufnehmen; mindestens eine auf diesem Server installierte Karte auswählen. Nach Änderung den Spielserver neu starten.",
+        "Keywords": "lan_css_gg_xlighty",
+        "FieldName": "lan_css_gg_xlighty",
+        "InputType": "checkbox",
+        "ParamFieldName": "lan_css_gg_xlighty",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "gg_xlighty"
+        }
+    },
+    {
+        "DisplayName": "Karten je Abstimmung",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenwahl:how_to_vote:2",
+        "Description": "Wird beim Start des Spielservers angewendet.",
+        "Keywords": "sm_mapvote_include",
+        "FieldName": "sm_mapvote_include",
+        "ParamFieldName": "sm_mapvote_include",
+        "IncludeInCommandLine": false,
+        "InputType": "number",
+        "DefaultValue": "5",
+        "MinValue": "2",
+        "MaxValue": "6",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Zuletzt gespielte Karten auslassen",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenwahl:how_to_vote:2",
+        "Description": "Wird beim Start des Spielservers angewendet.",
+        "Keywords": "sm_mapvote_exclude",
+        "FieldName": "sm_mapvote_exclude",
+        "ParamFieldName": "sm_mapvote_exclude",
+        "IncludeInCommandLine": false,
+        "InputType": "number",
+        "DefaultValue": "2",
+        "MinValue": "0",
+        "MaxValue": "20",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Abstimmungsdauer in Sekunden",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenwahl:how_to_vote:2",
+        "Description": "Wird beim Start des Spielservers angewendet.",
+        "Keywords": "sm_mapvote_voteduration",
+        "FieldName": "sm_mapvote_voteduration",
+        "ParamFieldName": "sm_mapvote_voteduration",
+        "IncludeInCommandLine": false,
+        "InputType": "number",
+        "DefaultValue": "20",
+        "MinValue": "5",
+        "MaxValue": "120",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "RTV ab Sekunden nach Kartenstart",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenwahl:how_to_vote:2",
+        "Description": "Wird beim Start des Spielservers angewendet.",
+        "Keywords": "sm_rtv_initialdelay",
+        "FieldName": "sm_rtv_initialdelay",
+        "ParamFieldName": "sm_rtv_initialdelay",
+        "IncludeInCommandLine": false,
+        "InputType": "number",
+        "DefaultValue": "30",
+        "MinValue": "0",
+        "MaxValue": "600",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Kartenwahl so viele Waffenlevel vor dem Ziel",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenwahl:how_to_vote:2",
+        "Description": "Wird beim Start des Spielservers angewendet.",
+        "Keywords": "lan_gg_vote_levels",
+        "FieldName": "lan_gg_vote_levels",
+        "ParamFieldName": "lan_gg_vote_levels",
+        "IncludeInCommandLine": false,
+        "InputType": "number",
+        "DefaultValue": "2",
+        "MinValue": "0",
+        "MaxValue": "15",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Spieleranteil für RTV",
+        "Category": "LAN Party:stadia_controller",
+        "Subcategory": "Kartenwahl:how_to_vote:2",
+        "Description": "Anteil der anwesenden Spieler für eine vorzeitige Kartenwahl.",
+        "Keywords": "sm_rtv_needed",
+        "FieldName": "sm_rtv_needed",
+        "ParamFieldName": "sm_rtv_needed",
+        "IncludeInCommandLine": false,
+        "InputType": "enum",
+        "DefaultValue": "0.60",
+        "EnumValues": {
+            "0.50": "50 %",
+            "0.60": "60 %",
+            "0.75": "75 %",
+            "1.00": "100 %"
+        }
     }
 ]

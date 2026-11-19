@@ -13,3 +13,9 @@
 {{lan_css_gg_aztec_ultimate}}
 {{lan_css_gg_sky_arena_max}}
 {{lan_css_gg_lego_snow_temple}}
+{{lan_css_fy_chancellery}}
+{{lan_css_fy_chateau}}
+{{lan_css_gg_mystic_garden}}
+{{lan_css_gg_no90_remix}}
+{{lan_css_gg_tnb_aztec}}
+{{lan_css_gg_xlighty}}

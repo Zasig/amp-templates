@@ -22,6 +22,12 @@ GunGame 1.2.16.0 is installed from a pinned commit of the author's repository. T
 
 GunGame's map configuration executes `lan-party.cfg` last, so upstream defaults cannot silently replace the AMP bot quota and round limits on a later map. The same applies when warmup finishes. Custom maps must already be present on the server before selecting them. The prepared GunGame pool has bot navigation for every enabled map.
 
+### Player map voting
+
+Players can type `nominate` in chat to propose a map from the AMP rotation and `rtv` to request an early map vote. The default threshold is 60% of players after the first 30 seconds. Versus starts its regular vote three minutes before the time limit. GunGame starts its vote when the leader is two weapon levels away from the final level. The winning map becomes the next map. An early RTV changes the map immediately.
+
+The profiles enable SourceMod MapChooser, Nominations and RockTheVote. The vote size, recent-map exclusion, duration and RTV settings are under **LAN Party → Kartenwahl**. The map switches under **Kartenrotation** control both rotation and nominations. Upload each custom BSP and its matching NAV to `cstrike/maps` before enabling that map. Additional Versus switches include `fy_chancellery` and `fy_chateau`. GunGame supports `gg_dust_complex`, `gg_mystic_garden`, `gg_no90_remix`, `gg_tnb_aztec` and `gg_xlighty`.
+
 ## CoD4x
 
 The template keeps the supplied `cod4x18_dedrun.exe` and the existing `mods/mp_bots` installation. It does not download, update or validate the game through Steam. Its update stages fetch the LAN configuration templates only; they do not recreate a Wine prefix.
@@ -39,6 +45,8 @@ Under **LAN Party**, CoD4x exposes:
 The default prepared profile is Team Deathmatch, eight players/bots in total, skill randomized between 2 and 5, automatic team balancing, and the 17-map pool reflected in the map switches. UAV, airstrike, helicopter and bot killstreak use start disabled, matching the earlier local bot configuration. They can be enabled individually in AMP.
 
 The normal CoD4 killstreak thresholds remain 3/5/7. This template does not invent DVARs for changing those hardcoded thresholds. The installed Bot Warfare 2.2.0 also lacks the newer `bots_manage_fill_watchplayers` option; that unsupported option is intentionally not exposed. CoD4 bots start after their configured delay even when the server is empty.
+
+Players who have joined a team can call a vote from the game console. `/callvote map mp_crash` proposes the next map. `/callvote g_gametype sd` proposes Search & Destroy and restarts the current map if it passes. `/callvote typemap dom mp_crash` proposes Domination on Crash for the next map. Use `/vote yes` or `/vote no` to cast a ballot. Votes use maps from the rotation and the six modes `dm war dom koth sab sd`. Abstentions carry zero weight when time expires, so idle bots do not add votes against. [CoD4x vote commands](https://github.com/callofduty4x/CoD4x_Server/blob/master/src/g_sv_cmds.c)
 
 Player-limit and mod arguments are supplied before executing configs and starting the first map. This matters for latched settings such as `sv_maxclients` and `fs_game`.
 

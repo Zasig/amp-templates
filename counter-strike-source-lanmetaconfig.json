@@ -22,5 +22,17 @@
         "AutoMap": true,
         "ConfigType": "template",
         "ConfigFileTemplate": "css/lan-bots.template.cfg"
+    },
+    {
+        "ConfigFile": "cstrike/cfg/sourcemod/mapchooser.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "css/lan-mapchooser.template.cfg"
+    },
+    {
+        "ConfigFile": "cstrike/cfg/sourcemod/rtv.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "css/lan-rockthevote.template.cfg"
     }
 ]
