@@ -12,5 +12,23 @@
         "ConfigType": "kvp",
         "ConfigFormat": "sets {0} \"{1}\"",
         "ConfigFormatRegex": "^sets (?<key>.+?) \"?(?<value>.*?)\"?$"
+    },
+    {
+        "ConfigFile": "main/lan-party.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "call-of-duty4xmw/lan-party.template.cfg"
+    },
+    {
+        "ConfigFile": "main/lan-map-pool.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "call-of-duty4xmw/lan-map-pool.template.cfg"
+    },
+    {
+        "ConfigFile": "main/lan-custom-rotation.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "call-of-duty4xmw/lan-custom-rotation.template.cfg"
     }
 ]

@@ -2,7 +2,11 @@
 
 Custom application templates for [CubeCoders AMP](https://cubecoders.com/AMP), following the format of the official [CubeCoders/AMPTemplates](https://github.com/CubeCoders/AMPTemplates) repository.
 
-## CoD4X Tempalte
+## LAN party: Counter-Strike Source and CoD4x
+
+See [LAN-PARTY.md](LAN-PARTY.md) for the Versus/GunGame profiles, native AMP controls for bots and maps, CoD4x killstreak/rule settings, Linux requirements and refresh instructions. The CoD4x template preserves the supplied game installation and performs no Steam game update or validation.
+
+## CoD4x Template
 
 
 ##

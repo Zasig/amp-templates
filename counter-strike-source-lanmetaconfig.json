@@ -1,0 +1,26 @@
+[
+    {
+        "ConfigFile": "cstrike/cfg/server.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "css/AMP_server.cfg"
+    },
+    {
+        "ConfigFile": "cstrike/cfg/lan-party.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "css/lan-party.template.cfg"
+    },
+    {
+        "ConfigFile": "cstrike/cfg/lan-mapcycle.txt",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "css/lan-mapcycle.template.txt"
+    },
+    {
+        "ConfigFile": "cstrike/cfg/lan-bots.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "css/lan-bots.template.cfg"
+    }
+]
